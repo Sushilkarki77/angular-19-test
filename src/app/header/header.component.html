@@ -1,0 +1,24 @@
+<div class="p-5 d-block h-full" >
+
+  <div class="d-block h-full  rounded-lg shadow-lg bg-white">
+    <div class="flex border-b border-gray-200 mb-4 d-block h-100">
+      <button class="flex-1 py-2 px-4 text-center hover:bg-gray-100 focus:outline-none" (click)="selectTab('result')"
+              [ngClass]="{ 'bg-blue-500 text-white': selectedTab === 'result' }">
+        Result
+      </button>
+      <button class="flex-1 py-2 px-4 text-center hover:bg-gray-100 focus:outline-none"
+              (click)="selectTab('newResults')" [ngClass]="{ 'bg-blue-500 text-white': selectedTab === 'newResults' }">
+        New Results
+      </button>
+      <button class="flex-1 py-2 px-4 text-center hover:bg-gray-100 focus:outline-none" (click)="selectTab('table')"
+              [ngClass]="{ 'bg-blue-500 text-white': selectedTab === 'table' }">
+        Table
+      </button>
+    </div>
+
+    <div class="p-4">
+      <router-outlet/>
+    </div>
+  </div>
+
+</div>

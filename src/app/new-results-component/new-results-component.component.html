@@ -1,0 +1,68 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div class="mb-4"><label for="home-team" class="block text-sm font-medium text-gray-700">Home Team Name</label>
+    <input formControlName="teamOne"
+           type="text" id="home-team" name="home-team"
+           class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+
+    <div *ngIf="formSubmitted && f.teamOne.errors">
+      <small *ngIf="f.teamOne.errors.required">Team one is required.</small>
+    </div>
+
+  </div>
+  <div class="mb-4"><label for="away-team" class="block text-sm font-medium text-gray-700">Away Team Name</label>
+    <input formControlName="teamTwo"
+           type="text" id="away-team" name="away-team"
+           class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+
+    <div *ngIf="formSubmitted && f.teamTwo.errors">
+      <small *ngIf="f.teamTwo.errors.required">Team two is required.</small>
+      <small *ngIf="f.teamTwo.errors.shouldNotMatch">Two Teams cannot be same.</small>
+    </div>
+
+  
+
+  </div>
+
+
+
+  <div class="mb-4"><label for="score" class="block text-sm font-medium text-gray-700">Score</label>
+    <input formControlName="score"
+           type="number" id="score" name="score"
+           class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+    <div *ngIf="formSubmitted && f.score.errors">
+      <small *ngIf="f.score.errors.required">Score is required.</small>
+    </div>
+
+  </div>
+
+  <div class="mb-4"><label for="score" class="block text-sm font-medium text-gray-700">Score 2</label>
+    <input formControlName="score2"
+           type="number" id="score2" name="score"
+           class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+    <div *ngIf="formSubmitted && f.score2.errors">
+      <small *ngIf="f.score2.errors.required">Score 2 is required.</small>
+    </div>
+
+  </div>
+
+  <div class="mb-4">
+    <label for="date" class="block text-sm font-medium text-gray-700">Date</label>
+    <input formControlName="date"
+           type="date" id="date" name="date"
+           class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+
+
+    <div *ngIf="formSubmitted && f.date.errors">
+      <small *ngIf="f.date.errors.required">Date is required.</small>
+      <small *ngIf="f.date.errors.futureDate">Future Date detected.</small>
+
+    </div>
+
+  </div>
+  <div>
+    <button type="submit"
+            class="w-full py-2 px-4 bg-blue-500 text-white font-bold rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+      Submit
+    </button>
+  </div>
+</form>

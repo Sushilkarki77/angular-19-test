@@ -1,0 +1,23 @@
+.result-item {
+    display: flex;
+    justify-content: center;
+    /* gap: 10px; */
+    flex-direction: column;
+    text-align: center;
+}
+
+.score-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.result-item {
+    border-top: dotted 1px;
+}
+
+.results-wrapper {
+    display: flex;
+        flex-direction: column;
+        gap: 10px;
+}

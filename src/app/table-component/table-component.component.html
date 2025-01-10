@@ -1,0 +1,35 @@
+<div class="overflow-x-auto">
+    <table class="min-w-full border-collapse border border-gray-200 text-sm">
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="border border-gray-300 px-1 py-2 text-left font-medium text-gray-700">Pos</th>
+
+          <th class="border border-gray-300 px-4 py-2 text-left font-medium text-gray-700">Team Name</th>
+          <th class="border border-gray-300 px-4 py-2 text-center font-medium text-gray-700">P</th>
+          <th class="border border-gray-300 px-4 py-2 text-center font-medium text-gray-700">Win</th>
+          <th class="border border-gray-300 px-4 py-2 text-center font-medium text-gray-700">Lose</th>
+          <th class="border border-gray-300 px-4 py-2 text-center font-medium text-gray-700">Tie</th>
+          <th class="border border-gray-300 px-4 py-2 text-center font-medium text-gray-700">+/-</th>
+          <th class="border border-gray-300 px-4 py-2 text-center font-medium text-gray-700">PTS</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Example row -->
+        <tr class="hover:bg-gray-50" *ngFor="let key of teamArray; let i = index">
+          <td class="border border-gray-300 px-1 py-2 text-gray-700">{{i + 1}}</td>
+          <td class="border border-gray-300 px-4 py-2 text-gray-700">{{key.name}}</td>
+          <td class="border border-gray-300 px-4 py-2 text-center text-gray-700">{{key.numberOfMatch}}</td>
+          <td class="border border-gray-300 px-4 py-2 text-center text-gray-700">{{key.win}}</td>
+          <td class="border border-gray-300 px-4 py-2 text-center text-gray-700">{{key.loose}}</td>
+          <td class="border border-gray-300 px-4 py-2 text-center text-gray-700">{{key.tie}}</td>
+          <td class="border border-gray-300 px-4 py-2 text-center text-gray-700">{{key.goalDifference}}</td>
+          <td class="border border-gray-300 px-4 py-2 text-center text-gray-700">{{key.points}}</td>
+
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
