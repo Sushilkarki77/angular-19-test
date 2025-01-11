@@ -1,6 +1,6 @@
 <h3 class="text-center mb-2"><b>Result List</b></h3>
 
-<div class="results-wrapper">
+<div class="results-wrapper" *ngIf="results.length > 0; else noResult">
     <div *ngFor="let result of results" class="result-item">
 
         <div>
@@ -23,9 +23,16 @@
             <div>
                 {{result.teamTwo }}
             </div>
+
+            <div class="cursor-pointer" (click)="deleteResult(result.id)">
+                <i class="fas fa-times"></i>
+            </div>
     
             
         </div>
     </div>
 
 </div>
+<ng-template #noResult>
+    League is yet to start
+</ng-template>

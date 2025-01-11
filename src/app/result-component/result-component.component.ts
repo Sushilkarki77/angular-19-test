@@ -24,4 +24,8 @@ export class ResultComponentComponent {
     // console.log(this.appStateService.items());
   }
 
+  deleteResult(resultId: String) {
+      console.log(resultId);
+  }
+
 }
